@@ -1,1 +1,95 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clima e Informações da Cidade</title>
+
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- AOS Animation Library -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <nav class="navegacao">
+      <div class="mudar-tema">
+        <div class="botaosol">
+          <img src="./img/botaosol.svg" class="img-tema" alt="claro" />
+        </div>
+        <div class="botaolua">
+          <img src="./img/botaolua.svg" class="img-tema" alt="escuro" />
+        </div>
+      </div>
+    </nav>
+    <section class="fundo-animado">
+      <div class="caixa-nuvem1">
+        <img src="./img/nuvem.svg" class="nuvem" alt="nuvem" />
+      </div>
+      <div class="caixa-sol">
+        <img src="./img/sol.svg" class="sol" alt="sol" />
+      </div>
+      <div class="caixa-nuvem2">
+        <img src="./img/nuvem.svg" class="nuvem" alt="nuvem" />
+      </div>
+    </section>
+    <section id="search-area">
+      <form id="search">
+        <input
+          type="text"
+          id="city_name"
+          placeholder="Digite o nome da cidade"
+          autocomplete="off"
+        />
+        <button type="submit"><i class="fas fa-search"></i> Buscar</button>
+      </form>
+      <ul id="suggestions"></ul>
+      <div id="alert"></div>
+    </section>
+
+    <section id="weather" class="card">
+      <div class="weather-main">
+        <h2 id="title"></h2>
+        <img id="temp_img" src="" alt="Ícone do clima" />
+        <p id="temp_value"></p>
+        <p id="temp_description"></p>
+      </div>
+
+      <div class="weather-details">
+        <p><strong>Máx:</strong> <span id="temp_max"></span></p>
+        <p><strong>Mín:</strong> <span id="temp_min"></span></p>
+        <p><strong>Umidade:</strong> <span id="humidade"></span></p>
+        <p><strong>Vento:</strong> <span id="vento"></span></p>
+      </div>
+    </section>
+
+    <section id="info-cidade" class="card">
+      <!-- Info extra da cidade será preenchido via JS -->
+    </section>
+
+    <section id="city_image" class="card">
+      <!-- Imagem da cidade (wikidata) -->
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
