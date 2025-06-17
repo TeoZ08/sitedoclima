@@ -1,1 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --fundo: repeating-linear-gradient(
+    to bottom right,
+    rgba(105, 203, 228, 0.904),
+    rgba(77, 183, 209, 0.788)
+  );
+
+  --fundo2: repeating-linear-gradient(
+    to bottom right,
+    rgba(76, 138, 153, 0.904),
+    rgba(0, 0, 0, 0.336)
+  );
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--fundo2);
+}
+
+.navegacao {
+  width: 100%;
+  height: 3.5rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.mudar-tema {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.img-tema {
+  width: 30px;
+  height: 30px;
+}
+
+.fundo-animado {
+  user-select: none;
+  width: 100%;
+  height: 250px;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  justify-content: center;
+}
+
+.caixa-sol {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+}
+
+.sol {
+  width: 300px;
+  height: 300px;
+  filter: drop-shadow(20px 20px 5rem rgb(219, 170, 7));
+}
+
+.caixa-nuvem1 {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.caixa-nuvem2 {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.nuvem {
+  width: 150px;
+  height: 150px;
+  filter: drop-shadow(0px 50px 10px rgba(0, 0, 0, 0.438));
+}
+
+#search-area {
+  padding: 20px;
+  text-align: center;
+}
+
+input[type="text"] {
+  padding: 8px;
+  width: 250px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+#suggestions {
+  list-style: none;
+  padding: 0;
+  margin-top: 5px;
+}
+
+#suggestions li {
+  background-color: #e0e0e0;
+  margin: 3px auto;
+  padding: 8px;
+  cursor: pointer;
+  width: 270px;
+  text-align: left;
+}
+
+#suggestions li:hover {
+  background-color: #d0d0d0;
+}
+
+.card {
+  background: white;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+}
+
+.weather-main {
+  text-align: center;
+}
+
+.weather-details p {
+  margin: 5px 0;
+}
+
+#alert {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Exibição controlada por classe show */
+#weather {
+  display: none;
+}
+
+#weather.show {
+  display: block;
+}
+
+img.weather-icon {
+  width: 80px;
+  height: 80px;
+}
+
+#city_image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
