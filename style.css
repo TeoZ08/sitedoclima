@@ -26,6 +26,8 @@ html {
 }
 body {
   background: var(--fundo2);
+    height: 100vh;
+
 }
 
 .navegacao {
